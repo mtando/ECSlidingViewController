@@ -151,6 +151,8 @@ float const ECSlidingAnimationDuration               = 0.1f;
         [self.underLeftViewController didMoveToParentViewController:self];
 
         [self updateUnderLeftLayout];
+        [self.view insertSubview:_underLeftViewController.view atIndex:0];
+
     }
 }
 
