@@ -16,6 +16,7 @@ NSString *const ECSlidingViewTopDidAnchorLeft        = @"ECSlidingViewTopDidAnch
 NSString *const ECSlidingViewTopDidAnchorRight       = @"ECSlidingViewTopDidAnchorRight";
 NSString *const ECSlidingViewTopWillReset            = @"ECSlidingViewTopWillReset";
 NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidReset";
+float const ECSlidingAnimationDuration               = 0.1f;
 
 @interface ECSlidingViewController ()
 
@@ -345,7 +346,7 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
 
     [self topViewHorizontalCenterWillChange:newCenter];
 
-    [UIView animateWithDuration:0.25f animations:^{
+    [UIView animateWithDuration:ECSlidingAnimationDuration animations:^{
         if (animations) animations();
         [self updateTopViewHorizontalCenter:newCenter];
     } completion:^(BOOL finished) {
@@ -389,7 +390,7 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
 
     [self topViewHorizontalCenterWillChange:newCenter];
 
-    [UIView animateWithDuration:0.25f animations:^{
+    [UIView animateWithDuration:ECSlidingAnimationDuration animations:^{
         if (animations) animations();
         [self updateTopViewHorizontalCenter:newCenter];
     } completion:^(BOOL finished) {
@@ -423,7 +424,7 @@ NSString *const ECSlidingViewTopDidReset             = @"ECSlidingViewTopDidRese
 {
     [self topViewHorizontalCenterWillChange:self.resettedCenter];
 
-    [UIView animateWithDuration:0.25f animations:^{
+    [UIView animateWithDuration:ECSlidingAnimationDuration animations:^{
         if (animations) animations();
         [self updateTopViewHorizontalCenter:self.resettedCenter];
     } completion:^(BOOL finished) {
